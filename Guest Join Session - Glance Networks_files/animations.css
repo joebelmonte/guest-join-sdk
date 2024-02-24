@@ -1,0 +1,127 @@
+/* Chrome animation*/
+
+.fa-arrow-circle-down {
+    font-size: 70px;
+    position: fixed;
+    left: 20px;
+    bottom: 200px;
+    animation: movechrome 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movechrome {
+  100% {
+    bottom: 5px;
+  }
+}
+
+/* Firefox animation – PC only */
+
+
+.firefox-animation {
+    display: none; /* animation displays only after a delay */
+    width: auto;
+    min-height: 80px;
+    background-color: #f96900;
+    text-align: left;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    -webkit-animation: firefox 2s 1;
+    animation: firefox 2s 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    overflow-y: auto;
+}
+
+.firefox-animation p{
+    padding-right: 50px;
+    width: 390px;
+}
+
+@-webkit-keyframes firefox {
+    0% {
+        -webkit-transform: translate(0, 200px);
+        transform: translate(0, 200px);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes firefox {
+    0% {
+        -webkit-transform: translate(0, 200px);
+        transform: translate(0, 200px);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+.animation-firefox-container {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+}
+
+.firefox-animation  .fas { 
+    position: absolute; 
+    right: 5px;
+    align-items: flex-end;
+    font-size: 50px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+
+
+.firefox-animation img {
+    width: 23px;
+    height: auto;
+    padding: 0px 3px;
+}
+
+.firefox-animation p {
+    padding-top: 5px;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+
+/************ Responsive Styles *************/
+
+/* Reduce the font size and width of the ff animation for narrower windows */
+
+@media screen and (max-width: 768px) {
+
+    .firefox-animation p {
+        font-size: .95em;
+        width: 350px;
+    }
+    .fa-arrow-up {
+        font-size: 60px;
+    }
+    .animation-firefox-container {
+        right: 35px;
+    }
+}
+
+/* Hide the ff animation for short or narrow windows */
+
+@media screen and (max-height: 600px) {
+    .animation-firefox-container {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .animation-firefox-container {
+        visibility: hidden;
+    }
+}
