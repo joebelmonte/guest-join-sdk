@@ -8,6 +8,11 @@ Dev version deployed here: [Custom Guest Join - DEV](https://www.glancedev1.com/
 
 ## Release Notes
 
-### February 24, 2023
+### February 25, 2024
+
+- Added ability to dynamically specify group id via a parameter in the URL of the page, e.g., `?groupid=20541`
+  - Defaults to `20541` if no group id specified in the URL.
+
+### February 24, 2024
 
 - Version 1.0 release
