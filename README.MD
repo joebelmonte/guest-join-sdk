@@ -2,7 +2,7 @@
 
 ## By Joe Belmonte
 
-Production deployed here: [Custom Guest Join]()
+Production deployed here: [Custom Guest Join](https://www.glancedev1.com/joeb/guestjoin/guestjoin.html)
 
 Dev version deployed here: [Custom Guest Join - DEV](https://www.glancedev1.com/joeb/dev/guestjoin/guestjoin.html)
 

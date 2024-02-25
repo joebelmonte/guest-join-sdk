@@ -1,95 +1,100 @@
 /* General Styles */
 body {
-    color: #242424;
+  color: #242424;
 }
 
 /* Grid layout */
 .session-form {
-    display: grid;
-    align-items: center;
-    /* grid-template-rows: repeat(2, 1fr); */
-    grid-template-columns: min-content min-content;
-    grid-gap: 20px 40px;
+  display: grid;
+  align-items: center;
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: min-content min-content;
+  grid-gap: 20px 40px;
 }
 
 .session-form #continuebutton {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 @media only screen and (max-width: 900px) {
-    .session-form {
-        grid-template-columns: auto;
-    }
+  .session-form {
+    grid-template-columns: auto;
+  }
 
-    h2 {
-        font-size: 1.5em;
-    }
+  h2 {
+    font-size: 1.5em;
+  }
 
-    h3 {
-        font-size: .95em;
-    }
+  h3 {
+    font-size: 0.95em;
+  }
 }
 
 #waitingtext {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-
 hr {
-    margin-top: 20px;
-    border: 1px solid #E0E0E0;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
 }
 
 .glance_poweredby {
-    margin-top: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 8px !important;
-    letter-spacing: 1px;
-    height: 10px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 8px !important;
+  letter-spacing: 1px;
+  height: 10px;
 }
 
 .session-form {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 label.name-required {
-    margin-bottom: 120px;
-    font-size: 18px;
+  margin-bottom: 120px;
+  font-size: 18px;
 }
 
 input#GuestName {
-    margin-top: 10px;
-    min-width: 250px;
+  margin-top: 10px;
+  min-width: 250px;
 }
 
 .icontextinput {
-    padding: 15px;
+  padding: 15px;
 }
 
 /* Hide language select and having troubleshoot */
 #ctl00_ctl00_HeaderContent_LanguageDropdown {
-    display: none;
+  display: none;
 }
 
 .troubleshoot-container {
-    display: none;
+  display: none;
 }
 
 .select {
-    display: none;
+  display: none;
 }
 
 #uniqueid {
-    border-radius: 60px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 15px 28px;
-    white-space: nowrap;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin-top: 10px;
+  border-radius: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 15px 28px;
+  white-space: nowrap;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 10px;
+}
+
+/* Hide the ssnid after being admitted */
+
+form:nth-child(2) {
+  display: none;
 }
