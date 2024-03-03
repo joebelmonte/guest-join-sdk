@@ -8,6 +8,10 @@ Dev version deployed here: [Custom Guest Join - DEV](https://www.glancedev1.com/
 
 ## Release Notes
 
+### March 3, 2024
+
+- Refactored `moreTime()` call so that the timeout can be extended as many times as the guest wants.
+
 ### February 25, 2024
 
 - Added ability to dynamically specify group id via a parameter in the URL of the page, e.g., `?groupid=20541`

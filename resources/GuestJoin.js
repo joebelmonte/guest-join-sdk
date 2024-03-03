@@ -1,15 +1,8 @@
-﻿function askToRefresh(timeout, connector) {
+﻿function askToRefresh(timeout) {
   // Ask the user if they want more time 1 minute before the code expires
   setTimeout(() => {
     document.querySelector("#modal-overlay").style.display = "block";
   }, timeout * 1000 - 60000);
-  document.querySelector("#btn-yes").addEventListener("click", () => {
-    connector.moreTime();
-    document.querySelector("#modal-overlay").style.display = "none";
-  });
-  document.querySelector("#btn-no").addEventListener("click", () => {
-    document.querySelector("#modal-overlay").style.display = "none";
-  });
 }
 
 async function getJoinCode() {
@@ -48,7 +41,18 @@ async function getJoinCode() {
   document.querySelector("#uniqueid").innerText = guestcode.code
     .replace(/(\d{3})/g, "$1 ")
     .replace(/(^\s+|\s+$)/, ""); // Add a blank space after 3 digits.;
-  askToRefresh(guestcode.timeout, connector);
+
+  askToRefresh(guestcode.timeout);
+
+  document.querySelector("#btn-yes").addEventListener("click", () => {
+    var timeUntilTimeout = connector.moreTime();
+    askToRefresh(timeUntilTimeout);
+    console.log(`Timeout extended by ${timeUntilTimeout} seconds.`);
+    document.querySelector("#modal-overlay").style.display = "none";
+  });
+  document.querySelector("#btn-no").addEventListener("click", () => {
+    document.querySelector("#modal-overlay").style.display = "none";
+  });
 }
 
 document
