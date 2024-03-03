@@ -20,10 +20,11 @@ async function getJoinCode() {
   // Get group id from url, otherwise use 20541
   const urlParams = new URLSearchParams(window.location.search);
   const groupid = urlParams.get("groupid") ? urlParams.get("groupid") : 20541;
+  const ws = urlParams.get("ws") ? urlParams.get("ws") : "www.glance.net";
 
   let connector = new GLANCE.Guest.Connector({
     groupid: groupid,
-    ws: "www.glance.net",
+    ws: ws,
   });
   connector.addEventListener("timeout", () => {
     document.querySelector("#uniqueid").innerText =
