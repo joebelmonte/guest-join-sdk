@@ -2,11 +2,12 @@
 
 ## By Joe Belmonte
 
-Production deployed here: [Custom Guest Join](https://www.glancedev1.com/joeb/guestjoin/guestjoin.html)
-Production iframed here: [Custom Iframed Guest Join](https://www.glancedev1.com/joeb/guestjoin/guestjoinparent.html)
-
-Dev version deployed here: [Custom Guest Join - DEV](https://www.glancedev1.com/joeb/dev/guestjoin/guestjoin.html)
-Dev iframed here: [Custom Iframed Guest Join - DEV](https://www.glancedev1.com/joeb/dev/guestjoin/guestjoinparent.html)
+- Prod
+  - Production deployed here: [Custom Guest Join](https://www.glancedev1.com/joeb/guestjoin/guestjoin.html)
+  - Production iframed here: [Custom Iframed Guest Join](https://www.glancedev1.com/joeb/guestjoin/guestjoinparent.html)
+- Dev
+  - Dev version deployed here: [Custom Guest Join - DEV](https://www.glancedev1.com/joeb/dev/guestjoin/guestjoin.html)
+  - Dev iframed here: [Custom Iframed Guest Join - DEV](https://www.glancedev1.com/joeb/dev/guestjoin/guestjoinparent.html)
 
 ## About
 
