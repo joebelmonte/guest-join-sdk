@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Guest Join SDK - Example Page</title>
+  <link rel="icon" type="image/png" href="./resources/favicon.png" />
+  <head>
+    <title>HTML Full-screen iframe (100% Height and Width)</title>
+    <style>
+      body {
+        margin: 0; /* Remove default margin */
+      }
+      iframe {
+        display: block; /* iframes are inline by default */
+        height: 100vh; /* Set height to 100% of the viewport height */
+        width: 100vw; /* Set width to 100% of the viewport width */
+        border: none; /* Remove default border */
+        background: lightyellow; /* Just for styling */
+      }
+    </style>
+  </head>
+  <body>
+    <iframe id="guest-join-page"></iframe>
+  </body>
+  <script>
+    const iframeSrc = new URL("guestjoin.html", window.location.href);
+    document.getElementById("guest-join-page").src = iframeSrc.href;
+  </script>
+</html>
