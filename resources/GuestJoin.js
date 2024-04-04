@@ -1,4 +1,23 @@
-﻿function askToRefresh(timeout) {
+﻿// Create useful variables
+const urlParams = new URLSearchParams(window.location.search);
+const groupid = urlParams.get("groupid") ? urlParams.get("groupid") : 20541;
+const ws = urlParams.get("ws") ? urlParams.get("ws") : "www.glance.net";
+const dataSite = urlParams.get("data-site")
+  ? urlParams.get("data-site")
+  : "production";
+
+// Add the appropriate guest join sdk version
+
+document.addEventListener("DOMContentLoaded", () => {
+  var theGuestScript = document.createElement("script");
+  var src = `https://${ws}/script/${groupid}/${dataSite}/Guest`;
+  theGuestScript.setAttribute("src", src);
+  document.querySelector("head").append(theGuestScript);
+});
+
+// Perform guest join functionality
+
+function askToRefresh(timeout) {
   // Ask the user if they want more time 1 minute before the code expires
   setTimeout(() => {
     document.querySelector("#modal-overlay").style.display = "block";
