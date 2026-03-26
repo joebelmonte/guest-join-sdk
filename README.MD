@@ -3,25 +3,42 @@
 ## By Joe Belmonte
 
 - Prod
-  - Production deployed here: [Custom Guest Join](https://www.glancedev1.com/joeb/guestjoin/guestjoin.html)
-  - Production iframed here: [Custom Iframed Guest Join](https://www.glancedev1.com/joeb/guestjoin/guestjoinparent.html)
+  - [Iframe Only](https://www.glancedev1.com/joeb/guestjoin/guest-join-iframe.html)
+    - This flow iframes the glance.net Join and Viewer pages onto glancedev1.
+    - It does not use the SDK.
+    - It keeps the entire experience on glancedev1 from the perspective of the user and requires the least dev effort.
+  - [SDK Only](https://www.glancedev1.com/joeb/guestjoin/sdk/guestjoin.html)
+    - This flow uses the SDK for the join page, which then redirects to glance.net for the viewer window.
+    - It allows for the most customization of the join page, which is also hosted on glancedev1 and does not use iframes.
+    - However, the user is redirected to glance.net for the in-session viewer experience.
+  - [SDK + Iframe](https://www.glancedev1.com/joeb/guestjoin/sdk/guestjoinparent.html)
+    - This flow uses the SDK for the join page which itself is iframed into another page on glancedev1.
+    - The benefit is that when the join page redirects to glance.net for the viewer, the parent page stays on glancedev1.
+    - This offers the ability to completely customize the join page while also keeping the entire experience on glancedev1.
 - Dev
-  - Dev version deployed here: [Custom Guest Join - DEV](https://www.glancedev1.com/joeb/dev/guestjoin/guestjoin.html)
-  - Dev iframed here: [Custom Iframed Guest Join - DEV](https://www.glancedev1.com/joeb/dev/guestjoin/guestjoinparent.html)
+  - [Iframe Only](https://www.glancedev1.com/joeb/dev/guestjoin/guest-join-iframe.html)
+  - [SDK Only](https://www.glancedev1.com/joeb/dev/guestjoin/sdk/guestjoin.html)
+  - [SDK + Iframe](https://www.glancedev1.com/joeb/dev/guestjoin/sdk/guestjoinparent.html)
 
 ## About
 
 This is a working implementation of the [Glance Guest Join SDK](https://help.glance.net/glance-cobrowse/glance-cobrowse-customizing/guest_join_sdk/).
 
-These pages use group `20541` on `www.glance.net` and `production` by default.
+The `SDK Only` page will use group `20541` on `www.glance.net` and `production` by default.
 
 You may specify a different group id, webserver, and/or data-site by specifying the value in the url, for example:
 
 ```
-https://www.glancedev1.com/joeb/guestjoin/guestjoin.html?groupid=<put group id here>&ws=<put webserver here>&data-site=<staging||production>
+https://www.glancedev1.com/joeb/guestjoin/sdk/guestjoin.html?groupid=<put group id here>&ws=<put webserver here>&data-site=<staging||production>
 ```
 
 ## Release Notes
+
+### March 26, 2026
+
+- Commented out the CSP
+- Updated README and fixed the links
+- Added the iframe only option to the repo
 
 ### April 4, 2024
 
