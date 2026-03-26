@@ -3,25 +3,15 @@
   <title>Guest Join SDK - Example Page</title>
   <link rel="icon" type="image/png" href="./resources/favicon.png" />
   <head>
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' blob: https://*.glancecdn.net  wss://*.glance.net https://*.glance.net; frame-src 'self' https://glancepro.online https://*.myglance.net https://*.glance.net; style-src 'self' https://*.glance.net https://*.glancecdn.net;"
+    /> -->
     <title>HTML Full-screen iframe (100% Height and Width)</title>
-    <style>
-      body {
-        margin: 0; /* Remove default margin */
-      }
-      iframe {
-        display: block; /* iframes are inline by default */
-        height: 100vh; /* Set height to 100% of the viewport height */
-        width: 100vw; /* Set width to 100% of the viewport width */
-        border: none; /* Remove default border */
-        background: lightyellow; /* Just for styling */
-      }
-    </style>
+    <script src="./resources/GuestJoinParent.js"></script>
+    <link href="./resources/GuestJoinParent.css" rel="stylesheet" />
   </head>
   <body>
-    <iframe id="guest-join-page"></iframe>
+    <iframe id="guest-join-page" allow="camera *"></iframe>
   </body>
-  <script>
-    const iframeSrc = new URL("guestjoin.html", window.location.href);
-    document.getElementById("guest-join-page").src = iframeSrc.href;
-  </script>
 </html>

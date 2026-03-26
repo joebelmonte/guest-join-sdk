@@ -3,6 +3,15 @@ body {
   color: #242424;
 }
 
+.validation-error {
+  display: none;
+}
+
+#joincode {
+  display: none;
+  min-width: 250px;
+}
+
 /* Grid layout */
 .session-form {
   display: grid;
@@ -32,6 +41,7 @@ body {
 
 #waitingtext {
   margin-top: 10px;
+  display: none;
 }
 
 hr {

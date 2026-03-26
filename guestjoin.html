@@ -2,6 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" class="no-js">
   <!--<!
   [endif]--><head id="ctl00_ctl00_Head">
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' blob: https://*.glancecdn.net  wss://*.glance.net https://*.glance.net; frame-src 'self' https://glancepro.online https://*.myglance.net https://*.glance.net; style-src 'self' https://*.glance.net https://*.glancecdn.net;"
+    /> -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Guest Join SDK - Example Page</title>
     <link rel="icon" type="image/png" href="./resources/favicon.png" />
@@ -29,12 +33,7 @@
     <link href="./resources/GuestJoin.css" rel="stylesheet" />
   </head>
   <body id="top" class="home page custom-background">
-    <form
-      name="aspnetForm"
-      method="post"
-      action="https://www.glance.net/guest/?groupid=20541"
-      id="aspnetForm"
-    >
+    <div id="aspnetForm">
       <div>
         <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" />
       </div>
@@ -94,7 +93,7 @@
                 <h2>Enter name to join virtual session</h2>
               </div>
 
-              <div id="waitingtext" style="display: none">
+              <div id="waitingtext">
                 <div class="spinner flowinline">
                   <div class="bounce1"></div>
                   <div class="bounce2"></div>
@@ -109,7 +108,7 @@
             <div id="guestwaitingroom">
               <div class="container session-form flex-outer">
                 <div aria-live="polite">
-                  <div id="joincode" style="min-width: 250px; display: none">
+                  <div id="joincode">
                     <h3>Give the agent this code:</h3>
                     <div
                       id="uniqueid"
@@ -131,11 +130,7 @@
                       autofocus=""
                       required=""
                     />
-                    <div
-                      class="validation-error"
-                      style="display: none"
-                      id="guestnameerror"
-                    >
+                    <div class="validation-error" id="guestnameerror">
                       Please enter your name
                     </div>
                     <button
@@ -180,6 +175,6 @@
         crossorigin="anonymous"
       ></script>
       <script src="./resources/GuestJoin.js"></script>
-    </form>
+    </div>
   </body>
 </html>
